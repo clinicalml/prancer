@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-#header_wrap, footer_wrap {
+#header_wrap, #footer_wrap {
   background: #607d8b;
 }
 
@@ -12,6 +12,6 @@
   right: 2px;
 }
 
-#h2, h3, h3 {
+h2, h3, h4 {
   color: #323f45;
 }
