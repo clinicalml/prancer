@@ -1,1 +1,1 @@
-# clinical-annotation-platform
+# Clinical Annotation Platform
