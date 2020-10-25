@@ -1,7 +1,7 @@
 ## Why?
 
 ##  Demo Video
-<video controls="controls" width="400" height="300" name="Demo" src="files/annotator_demo.mov"></video>
+<video controls="controls" width="400" height="250" name="Demo" src="files/annotator_demo.mov"></video>
        
 ##  Features
 ### Recommendations
