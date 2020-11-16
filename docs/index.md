@@ -6,27 +6,27 @@ Our platform enables the rapid annotation of medical terms within clinical notes
 ## Why?
 Clinical notes document detailed patient information, including pertinent medical history, procedures performed during a visit, and response to treatment. This information can be leveraged for a variety of use cases--from more personalized decision support in electronic health record to richer retrospective research. 
 
-However, this data often exists only in clinical text, and not in any structured fields; therefore, many use cases involve manual or automated structuring of relevant concepts from clinical notes. Current automated approaches of extracting structured clinical concepts are insufficiently robust for many downstream uses, and there isn't much annotated training data publicly available. The goal of our platform is to make that annotation process easier and faster: whether for manual curation, or for the creation of general training data.
+However, this data often exists only in clinical text, and not in any structured fields; therefore, many use cases involve manual or automated structuring of relevant concepts from clinical notes. Current automated approaches of extracting structured clinical concepts are insufficiently robust for many downstream uses, and there isn't much annotated training data publicly available to improve machine learning models. The goal of our platform is to make that annotation process easier and faster: whether for a manual curation use case, or for the creation of an annotated training dataset.
 
        
 ##  Features
-### Recommendations
-<img src="files/rec.png">
-
 ### Pre-Annotations
-<img src="files/suggestion.png">
+<img src="files/suggestion.png" width="500">
+
+### Recommendations
+<img src="files/rec.png" width="500">
 
 ### Search
-<img src="files/search.png">
+<img src="files/search.png" width="500">
 
 ### UMLS Linking
-<img src="files/more_info.png">
+<img src="files/more_info.png" width="500">
 
 ### Concept Categories
-<img src="files/filter.png">
+<img src="files/filter.png" width="500">
 
 ### Flexible Annotation
-<img src="files/match_options.png">
+<img src="files/match_options.png" width="500">
 
 ## How to Use
 ### Installation Instructions
