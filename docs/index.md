@@ -11,7 +11,22 @@ However, this data often exists only in clinical text, and not in any structured
        
 ##  Features
 ### Recommendations
+<img src="files/rec.png">
+
 ### Pre-Annotations
+<img src="files/suggestion.png">
+
+### Search
+<img src="files/search.png">
+
+### UMLS Linking
+<img src="files/more_info.png">
+
+### Concept Categories
+<img src="files/filter.png">
+
+### Flexible Annotation
+<img src="files/match_options.png">
 
 ## How to Use
 ### Installation Instructions
