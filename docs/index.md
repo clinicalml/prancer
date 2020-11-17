@@ -11,14 +11,12 @@ However, this data often exists only in clinical text, and not in any structured
        
 ##  Features
 ### Pre-Annotations
-Sometimes concept mentions are simple and straightforward for algorithms to recognize. In these cases, <i>pre-annotations</i> can save annotators time and energy. <i>Pre-annotations</i> outline the suggested span of text alongside its predicted label. The user can then to choose to accept the machine suggestion in just a single click, or modify or delete.
-<figure>
-       <img src="files/suggestion.png" width="500">
-       <figcaption>In this image, there are 3 pre-annotations: on flagyl, BUN, and NGT.</figcaption>
-</figure>
-Our system can flexibly set the <i>pre-annotations</i> to the outputs of any clinical entity extraction system (MetaMap, cTAKES, ClinicalBERT). A user just provides the spans and expected labels in a CSV file; we provide scripts to generate these CSV's from dictionary lookups and from scispaCy. 
+Sometimes concept mentions are simple and straightforward for algorithms to recognize. In these cases, <i>pre-annotations</i> can save annotators time and energy. <i>Pre-annotations</i> outline the suggested span of text alongside its predicted label. The user can then to choose to accept the machine suggestion in just a single click, or modify or delete. In the image below, there are 3 pre-annotations: on flagyl, BUN, and NGT.
+<img src="files/suggestion.png" width="500">
+PRAnCER can flexibly set the <i>pre-annotations</i> to the outputs of any clinical entity extraction system (MetaMap, cTAKES, ClinicalBERT). A user just provides the spans and expected labels in a CSV file; we provide scripts to generate these CSV's from dictionary lookups and from scispaCy. 
        
 ### Recommendations
+Even when a model can't settle on a single label with high-confidence, it can often surface a correct label in its top few predictions. PRAnCER comes built-in with an NLP recommendation algorithm for suggesting likely concept labels once a span of text is highlighted. Below you can see that we can correctly recommend 'vancomycin' for the term <i>vanco</i>. The recommendation function is merely a Python call, so one can easily swap out our recommendation algorithm for any new model. 
 <img src="files/rec.png" width="500">
 
 ### Search
