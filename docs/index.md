@@ -11,8 +11,13 @@ However, this data often exists only in clinical text, and not in any structured
        
 ##  Features
 ### Pre-Annotations
-<img src="files/suggestion.png" width="500">
-
+Sometimes concept mentions are simple and straightforward for algorithms to recognize. In these cases, we allow for <i>pre-annotations<i>; these pre-outline the suggested span of text and pre-label it. The user can then to choose to accept in just a single click, or modify or delete.
+<figure>
+       <img src="files/suggestion.png" width="500">
+       <figcaption>In this image, there are 3 pre-annotations: on flagyl, BUN, and NGT.</figcaption>
+</figure>
+Our system is flexible and allows the user to set the outputs of any clinical entity extraction system (MetaMap, cTAKES, ClinicalBERT) as pre-annotations. A user just provides the spans and expected labels in a CSV file; we provide scripts to generate these CSV's from dictionary lookups and from scispaCy. 
+       
 ### Recommendations
 <img src="files/rec.png" width="500">
 
