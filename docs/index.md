@@ -20,23 +20,25 @@ Even when a model can't settle on a single label with high-confidence, it can of
 <img src="files/rec.png" width="500">
 
 ### Search
-When the recommendations fail to bring up the correct label(s), the annotator can easily search for their desired term without having to leave the interface. In the example below, the annotator could search 'piperacillin' and directly click to select.
+When the recommendations fail to bring up the correct label(s), the annotator can easily search for their desired term without having to leave the interface. In the example below, the annotator could search 'piperacillin' and directly click to select. <br>
 <img src="files/search.png" width="500">
 
 ### UMLS Linking
-Medical ontologies are large and nuanced, and sometimes it is necessary to get more information before choosing a concept label. You can link your UMLS account to our interface, and as shown below, it will automatically surface the UMLS-provided definitions for a concept in one click. 
+Medical ontologies are large and nuanced, and sometimes it is necessary to get more information before choosing a concept label. You can link your UMLS account to our interface, and as shown below, it will automatically surface the UMLS-provided definitions for a concept in one click. <br>
 <img src="files/more_info.png" width="500">
 
 ### Concept Categories
+We provide a color-coding for each concept type, e.g. findings, procedures, medical devices; these can be used as visual cues to quickly find the desired concept label. Further, users can choose to filter concepts by these concept types; below, the user chose to filter the 'PT' terms to anatomical terms.<br>
 <img src="files/filter.png" width="500">
 
 ### Flexible Annotation
+We understand that annotation is often messy and inexact, so PRAnCER provide tooling that can help support such use cases. Users can choose multiple concepts, label a concept as an 'ambiguous match', or as below, indicate there was no direct match found. PRAnCER also enables the annotation of overlapping spans. 
 <img src="files/match_options.png" width="500">
 
 ## How to Use
 ### Installation Instructions
-PRAncer is built on python3 and Node.Js;the README of our Github provides detailed instructions on how to install PRAnCER on your machine in a few simple steps. 
+PRAncer is built on python3 and Node.Js; the README of our Github provides detailed instructions on how to install PRAnCER on your machine in a few simple steps. PRAnCER can operate on Mac, Windows, and Linux machines.
 ### Loading in Data
-To load in data, users directly place any .txt files in the /data folder. If the user wants to load in pre-annotations, our script will generate the requisite json files from provided CSVs containing spans and concepts. Users can choose to use their own algorithm or one of our built-ins.
+To load in data, users directly place any clinical notes as .txt files in the /data folder. If the user wants to load in pre-annotations, users can generate a CSV of spans and concepts from their own algorithm or one of our built-ins, and our scripts will generate the requisite json files that load the suggestions into PRAnCER. 
 ### Creating Custom Vocabulary
 PENDING vocabulary sharing
