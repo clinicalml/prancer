@@ -16,13 +16,15 @@ Sometimes concept mentions are simple and straightforward for algorithms to reco
 PRAnCER can flexibly set the <i>pre-annotations</i> to the outputs of any clinical entity extraction system (MetaMap, cTAKES, ClinicalBERT). A user just provides the spans and expected labels in a CSV file; we provide scripts to generate these CSV's from dictionary lookups and from scispaCy. 
        
 ### Recommendations
-Even when a model can't settle on a single label with high-confidence, it can often surface a correct label in its top few predictions. PRAnCER comes built-in with an NLP recommendation algorithm for suggesting likely concept labels once a span of text is highlighted. Below you can see that we can correctly recommend 'vancomycin' for the term <i>vanco</i>. The recommendation function is merely a Python call, so one can easily swap out our recommendation algorithm for any new model. 
-<img src="files/rec.png" width="500"><br>
+Even when a model can't settle on a single label with high-confidence, it can often surface a correct label in its top few predictions. PRAnCER comes built-in with an NLP recommendation algorithm for suggesting likely concept labels once a span of text is highlighted. Below you can see that we can correctly recommend 'vancomycin' for the highlighted <i>vanco</i>. The recommendation function is merely a Python call, so one can easily swap out our recommendation algorithm for any new model. <br>
+<img src="files/rec.png" width="500">
 
 ### Search
+When the recommendations fail to bring up the correct label(s), the annotator can easily search for their desired term without having to leave the interface. In the example below, the annotator could search 'piperacillin' and directly click to select.
 <img src="files/search.png" width="500">
 
 ### UMLS Linking
+Medical ontologies are large and nuanced, and sometimes it is necessary to get more information before choosing a concept label. You can link your UMLS account to our interface, and as shown below, it will automatically surface the UMLS-provided definitions for a concept in one click. 
 <img src="files/more_info.png" width="500">
 
 ### Concept Categories
@@ -33,5 +35,8 @@ Even when a model can't settle on a single label with high-confidence, it can of
 
 ## How to Use
 ### Installation Instructions
+PRAncer is built on python3 and Node.Js;the README of our Github provides detailed instructions on how to install PRAnCER on your machine in a few simple steps. 
 ### Loading in Data
+To load in data, users directly place any .txt files in the /data folder. If the user wants to load in pre-annotations, our script will generate the requisite json files from provided CSVs containing spans and concepts. Users can choose to use their own algorithm or one of our built-ins.
 ### Creating Custom Vocabulary
+PENDING vocabulary sharing
