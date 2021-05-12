@@ -12,6 +12,7 @@ node_modules
 *.py~
 tmp
 clinical-annotator-lookups/*
+!clinical-annotator-lookups/.gitkeep
 static/dist
 tutorial/*.txt
 tutorial/*.json
