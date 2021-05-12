@@ -3,8 +3,16 @@
 PRAnCER (Platform enabling Rapid Annotation for Clinical Entity Recognition) is a web platform that enables the rapid annotation of medical terms within clinical notes. A user can highlight spans of text and quickly map them to concepts in large vocabularies within a single, intuitive platform. Users can use the search and recommendation features to find labels without ever needing to leave the interface. Further, the platform can take in output from existing clinical concept extraction systems as pre-annotations, which users can accept or modify in a single click. These features allow users to focus their time and energy on harder examples instead. 
 
 ## Usage
-
-The clinical annotation platform operates by leveraging files derived from the UMLS. 
+### Installation Instructions
+Detailed installation instructions are provided below; PRAnCER can operate on Mac, Windows, and Linux machines.
+### Linking to UMLS Vocabulary
+Use of the platform requires a UMLS license, as it requires several UMLS-derived files to surface recommendations. Please email magrawal (at) mit (dot) edu to request these files, along with your API key so we may confirm. You can sign up [here](https://uts.nlm.nih.gov/uts/signup-login). Surfacing additional information in the UI also requires you enter your UMLS API key in application/utils/constants.py. 
+### Loading in and Exporting Data
+To load in data, users directly place any clinical notes as .txt files in the /data folder; an example file is provided. The output of annotation is .json file in the /data folder with the same file prefix as the .txt. To start annotating a note from scratch, a user can just delete the corresponding .json file. 
+### Pre-filled Suggestions
+Two options exist for pre-filled suggestions; users specify which they want to use in application/utils/constants.py. The default is "MAP".
+Option 1 for pre-filled suggestions is "MAP", if users want to preload annotations based on a dictionary of high-precision text to CUI for their domain, e.g. {hypertension: "C0020538"}. A pre-created dictionary will be provided alongside the UMLS files described above.
+Option 2 for pre-filled suggestions is "CSV", if users want to load in pre-computed pre-annotations (e.g. from their own algorithm, scispacy, cTAKES, MetaMap). Users simply place a CSV of spans and CUIs, with the same prefix as the data .txt file, and our scripts will automatically incorporate those annotations. example.csv in the /data file provides an example.
 
 ## Installation
 
