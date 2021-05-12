@@ -3,11 +3,13 @@
 venv
 env
 application/__pycache__
+application/utils/__pycache__
 __pycache__
 blog_old.md
 node_modules
 .idea/*
 *.pyc
+*.py~
 tmp
 clinical-annotator-lookups/*
 static/dist
