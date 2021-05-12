@@ -99,6 +99,6 @@ After this, open your browser to http://localhost:3000 and you should see the ho
 
 ## Contact
 
-If you have any questions, please email Monica Agrawal [magrawal@mit.edu].
+If you have any questions, please email Monica Agrawal [magrawal@mit.edu]. Credit belongs to Ariel Levy for the development of this platform.
 
 Based on [React-Redux-Flask boilerplate.](https://github.com/dternyak/React-Redux-Flask)
