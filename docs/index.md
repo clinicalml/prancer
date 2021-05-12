@@ -13,7 +13,7 @@ However, this data often exists only in clinical text, and not in any structured
 ### Pre-Annotations
 Sometimes concept mentions are simple and straightforward for algorithms to recognize. In these cases, <i>pre-annotations</i> can save annotators time and energy. <i>Pre-annotations</i> outline the suggested span of text alongside its predicted label. The user can then to choose to accept the machine suggestion in just a single click, or modify or delete. In the image below, there are 3 pre-annotations: on flagyl, BUN, and NGT.
 <br><img src="files/suggestion.png" width="500"><br>
-PRAnCER can flexibly set the <i>pre-annotations</i> to the outputs of any clinical entity extraction system (MetaMap, cTAKES, ClinicalBERT). A user just provides the spans and expected labels in a CSV file; we provide scripts to generate these CSV's from dictionary lookups and from scispaCy. 
+PRAnCER can flexibly set the <i>pre-annotations</i> to the outputs of any clinical entity normalization system (MetaMap, cTAKES, ClinicalBERT). A user just provides the spans and expected labels in a CSV file. Alternately, a user can provide a dictionary from text to the CUI they want it to pre-fill to; a sample dictionary is provided.
        
 ### Recommendations
 Even when a model can't settle on a single label with high-confidence, it can often surface a correct label in its top few predictions. PRAnCER comes built-in with an NLP recommendation algorithm for suggesting likely concept labels once a span of text is highlighted. Below you can see that we can correctly recommend 'vancomycin' for the highlighted <i>vanco</i>. The recommendation function is merely a Python call, so one can easily swap out our recommendation algorithm for any new model. <br>
@@ -39,6 +39,6 @@ We understand that annotation is often messy and inexact, so PRAnCER provide too
 ### Installation Instructions
 PRAncer is built on python3 and Node.Js; the README of our Github provides detailed instructions on how to install PRAnCER on your machine in a few simple steps. PRAnCER can operate on Mac, Windows, and Linux machines.
 ### Loading in Data
-To load in data, users directly place any clinical notes as .txt files in the /data folder. If the user wants to load in pre-annotations, users can generate a CSV of spans and concepts from their own algorithm or one of our built-ins, and our scripts will generate the requisite json files that load the suggestions into PRAnCER. 
-### Creating Custom Vocabulary
-PENDING vocabulary sharing
+To load in data, users directly place any clinical notes as .txt files in the /data folder of our annotaor. If the user wants to load in pre-annotations, users can place a CSV of spans and CUIs, and our scripts will automatically incorporate those annotations. An example .txt file and .csv file are provided.
+### UMLS Vocabulary
+Use of the platform requires a UMLS license, as it requires several UMLS-derived files to surface recommendations, as well as a UMLS API key to surface additional information. Please email magrawal (at) mit (dot) edu to request these files, along with your API key so we may confirm. You can sign up [here](https://uts.nlm.nih.gov/uts/signup-login). 
