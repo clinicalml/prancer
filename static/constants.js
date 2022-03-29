@@ -1,6 +1,5 @@
 // SERVER CONSTANTS
 
-export const PUBLIC_SERVER_ADDRESS = 'http://kratos.csail.mit.edu:8919';
 export const LOCAL_SERVER_ADDRESS = 'http://localhost:5000';
 export const SERVER_ADDRESS = LOCAL_SERVER_ADDRESS;
 
